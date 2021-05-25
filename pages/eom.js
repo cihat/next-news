@@ -1,20 +1,23 @@
 import React from "react"
+import Layout from "../components/Layout"
 import styles from "../styles/EOM.module.scss"
 
 const eom = ({ employee }) => {
   console.log(employee)
   return (
-    <div className={styles["page-container"]}>
-      <div className={styles.main}>
-        <h1>Employee Of The Month</h1>
-        <div className={styles.employeeOfTheMonth}>
-          <h3>{employee.name}</h3>
-          <h6>{employee.position}</h6>
-          <img src={employee.image} alt={employee.description} />
-          <p>{employee.description}</p>
+    <Layout>
+      <div className={styles["page-container"]}>
+        <div className={styles.main}>
+          <h1>Employee Of The Month</h1>
+          <div className={styles.employeeOfTheMonth}>
+            <h3>{employee.name}</h3>
+            <h6>{employee.position}</h6>
+            <img src={employee.image} alt={employee.description} />
+            <p>{employee.description}</p>
+          </div>
         </div>
       </div>
-    </div>
+    </Layout>
   )
 }
 

@@ -1,9 +1,16 @@
-import styles from '../styles/Home.module.css'
+import Head from "next/head"
+import styles from "../styles/Home.module.scss"
+import Toolbar from "../components/toobar"
 
 export default function Home() {
   return (
-    <div className={styles.container}>
-      <h1>Hellooo</h1>
+    <div className="page-container">
+      <Toolbar />
+
+      <div className={styles.main}>
+        <h1>Next.js News App</h1>
+        <h3>Your one stop shop for the latest news articles</h3>
+      </div>
     </div>
   )
 }
