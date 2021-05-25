@@ -8,7 +8,7 @@ const eom = ({ employee }) => {
     <Layout>
       <div className={styles["page-container"]}>
         <div className={styles.main}>
-          <h1>Employee Of The Month</h1>
+          <h1>Next Project</h1>
           <div className={styles.employeeOfTheMonth}>
             <h3>{employee.name}</h3>
             <h6>{employee.position}</h6>
