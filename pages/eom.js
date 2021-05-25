@@ -1,4 +1,4 @@
-import React from "react"
+import React from "react";
 
 const eom = () => {
   return (
@@ -11,7 +11,17 @@ const eom = () => {
 }
 
 export const getServerSideProps = async (pageContext) => {
+  const apiResponse = await fetch(
+    'https://my-json-server.typicode.com/cihat/next-news/employeeOfTheMonth'
+  );
 
+  const employee = await apiResponse.json()
+
+  return {
+    props: {
+      employee
+    }
+  }
 }
 
 export default eom
